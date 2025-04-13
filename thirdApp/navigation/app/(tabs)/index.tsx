@@ -1,6 +1,7 @@
 import { StyleSheet } from "react-native";
 import { Text, View } from "@/components/Themed";
 import React, { useState, useEffect } from "react";
+import TabTwoScreen from "./two";
 
 export default function TabOneScreen() {
   const [currentTime, setCurrentTime] = useState(new Date());
@@ -10,9 +11,10 @@ export default function TabOneScreen() {
       setCurrentTime(new Date());
     }, 1000);
 
-    return () => clearInterval(timer); 
+    return () => clearInterval(timer);
   }, []);
-  
+
+  // <TabThreeScreen data="shivam" />;
 
   return (
     <View style={styles.container}>
